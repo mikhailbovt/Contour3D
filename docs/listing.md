@@ -4,7 +4,7 @@
 | --- | --- |
 | Developer | Mikhail Bovt |
 | Version | 1.0.0 |
-| Category | Design |
+| Category | Developer Tools |
 | Availability | All countries available through the directory |
 | Plugin price | No purchase or subscription offered by Contour3D |
 

@@ -36,8 +36,8 @@ class PackagingTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temporary:
             root=self.copied_tree(temporary)
             path=root/".codex-plugin/plugin.json"
-            data=json.loads(path.read_text());data["skills"]="./../outside"
-            path.write_text(json.dumps(data))
+            data=json.loads(path.read_text(encoding="utf-8"));data["skills"]="./../outside"
+            path.write_text(json.dumps(data),encoding="utf-8")
             with self.assertRaisesRegex(ValueError,"resource path"):
                 pack.validate(root)
 
@@ -70,8 +70,8 @@ class PackagingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'checksum mismatch'):pack.validate(root)
         with tempfile.TemporaryDirectory() as temporary:
             root=self.copied_tree(temporary)
-            path=root/"plugin.json";data=json.loads(path.read_text());data["version"]="0.2.0"
-            path.write_text(json.dumps(data))
+            path=root/"plugin.json";data=json.loads(path.read_text(encoding="utf-8"));data["version"]="0.2.0"
+            path.write_text(json.dumps(data),encoding="utf-8")
             with self.assertRaisesRegex(ValueError,"identity/version differ"):
                 pack.validate(root)
 

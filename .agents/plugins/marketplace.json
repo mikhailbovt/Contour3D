@@ -1,0 +1,20 @@
+{
+  "name": "contour3d-dev",
+  "interface": {
+    "displayName": "Contour3D"
+  },
+  "plugins": [
+    {
+      "name": "contour3d",
+      "source": {
+        "source": "local",
+        "path": "./plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Design"
+    }
+  ]
+}

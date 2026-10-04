@@ -1,0 +1,14 @@
+{
+  "schema_version": 2,
+  "source_sha256": "REPLACE_WITH_CURRENT_SOURCE_HASH",
+  "frame": 1,
+  "metres_per_blender_unit": 1,
+  "operations": [
+    {"kind":"set_control", "control":{"kind":"shape_key","object":"Editable bridge","name":"Bridge arch","minimum":0,"maximum":1.5}, "value":1.1}
+  ],
+  "constraints": [
+    {"kind":"object_unchanged","object":"Protected bridge foot 1"},
+    {"kind":"object_unchanged","object":"Protected bridge foot 2"},
+    {"kind":"region_position","object":"Editable bridge","evaluated":true,"selector":{"kind":"attribute","name":"fixed_mount_band"},"tolerance_m":0.000001,"normal_tolerance_degrees":0.1}
+  ]
+}

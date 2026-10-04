@@ -1,0 +1,9 @@
+.local/
+dist/
+outputs/
+build/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.blend1
+*.blend2

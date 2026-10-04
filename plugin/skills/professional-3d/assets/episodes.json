@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "classification": "Original executable development content; independent expert approval is not established",
+  "episodes": [
+    {"name":"housing","decision":"Fixed-rim double curvature, seats and Boolean details","source":"Native GN and retained cutters","next_edit":"Crown 12 to 20 mm; evaluated inner/outer seat","limits":"Not a CAD continuity certificate"},
+    {"name":"transition","decision":"Sparse landmark-matched section progression","source":"Subdivision cage and shoulder key","next_edit":"Shoulder spread with collars, highlight and clearance checks","limits":"Intentional open ends; endpoint coordinates do not certify evaluated collar contact"},
+    {"name":"curved-insert","decision":"Detail sources following a shared crown datum","source":"Native GN fields and one object-property driver","next_edit":"Coupled panel/bezel/insert crown with fixed seat/mounts","limits":"Proud insert, not a Boolean recess; inspect panel sampling and strip-light artifacts"},
+    {"name":"sweep","decision":"Editable curved path and physical endpoints","source":"Native Bezier curve with minimum twist","next_edit":"Middle points, protected mounts, endpoint tangents","limits":"Automatic handles can change endpoint tangents; complex section/closure needs additional orientation control"},
+    {"name":"assembly","decision":"Editable arch and distinct structural interfaces","source":"Shape key, undeformed band, Solidify wall","next_edit":"Arch with evaluated mount band and six neighbours","limits":"Current frame/selected band; not full collision or structural strength"},
+    {"name":"imported-repair","decision":"Repair baked topology without invented history","source":"Explicit mesh construction defect","next_edit":"Repair, then retained-key deformation with protected outer region","limits":"Public self-authored regression fixture, not independent holdout"},
+    {"name":"materials","decision":"UV/resource/shader isolation and delivery","source":"UV plaque and separate material samples","next_edit":"Packed local base-colour transfer, reopen, static GLB roundtrip","limits":"Generated albedo is not calibrated PBR; seams/shader conversion need visual review"}
+  ]
+}

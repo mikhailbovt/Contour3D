@@ -1,0 +1,6 @@
+interface:
+  display_name: "Professional 3D"
+  short_description: "Complex editable forms and careful local 3D edits"
+  default_prompt: "Use $professional-3d to model or refine this asset in the existing Blender workflow, preserving its form and editability."
+policy:
+  allow_implicit_invocation: true

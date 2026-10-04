@@ -1,0 +1,62 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "contour3d",
+  "version": "1.0.0",
+  "description": "Reference-guided Blender modeling for Codex, with native checks, protected edits, a local 3D workbench and built-in imagegen workflows.",
+  "author": {
+    "name": "Mikhail Bovt",
+    "url": "https://github.com/mikhailbovt"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "3d",
+    "blender",
+    "modeling",
+    "surfaces",
+    "topology",
+    "codex"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Contour3D",
+        "shortDescription": "Reference-guided 3D modeling",
+        "longDescription": "Contour3D helps Codex avoid modeling mistakes and improve results through references, measurements and checks. Build and refine editable Blender assets with curved forms, fitted details, assemblies, materials and UVs. Inspect source and evaluated geometry, preserve declared regions and dependencies, and roll back edits that fail their constraints. Review real Blender renders and select parts or regions in a bundled local 3D workbench without MCP. Use built-in Codex imagegen for specific visual questions or material resources, then transfer accepted features into the native asset and check it again. An existing Blender installation and local Codex execution are required; the workbench interface is currently Russian. No dramatic improvement is guaranteed: quality also depends on the GPT model, the references and the chosen representation. Checks cover only the declared properties; artistic judgment and target-runtime validation remain necessary.",
+        "developerName": "Mikhail Bovt",
+        "category": "Design",
+        "capabilities": [
+          "Reference-guided modeling",
+          "Editable Blender construction",
+          "Native and evaluated inspection",
+          "Protected edits and rollback",
+          "Local interactive 3D review",
+          "Built-in imagegen workflow"
+        ],
+        "websiteURL": "https://github.com/mikhailbovt/Contour3D",
+        "supportURL": "https://github.com/mikhailbovt/Contour3D/blob/main/SUPPORT.md",
+        "privacyPolicyURL": "https://github.com/mikhailbovt/Contour3D/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/mikhailbovt/Contour3D/blob/main/TERMS.md",
+        "defaultPrompt": [
+          "Build an editable curved enclosure and verify a later curvature change.",
+          "Refine this model using its references and preserve the selected mounting points.",
+          "Use current renders to design a detail with imagegen, then implement and verify it in Blender."
+        ],
+        "brandColor": "#235D73",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      },
+      "publication": {
+        "countries": [],
+        "release_notes": "First public release: reference-guided Blender authoring, seven editable source examples, evaluated diagnostics, protected edits and rollback, local 3D review, built-in Codex imagegen workflow and static GLB roundtrip checks.",
+        "translations": {
+          "ru-RU": {
+            "subtitle": "3D-моделирование по референсам",
+            "description": "Contour3D помогает Codex избегать ошибок при моделировании и повышать качество за счёт референсов, измерений и проверок. Плагин предлагает редактируемые конструкции Blender, локальные правки с защитой важных областей, реальные диагностические рендеры, 3D-окно без MCP и адресный флоу встроенного imagegen. Требуются установленный Blender и локальное исполнение Codex. Невероятное улучшение качества не гарантируется: результат зависит также от GPT-модели, исходных материалов и выбранного способа построения. Проверки покрывают только объявленные свойства; художественная оценка и проверка целевой среды остаются необходимыми."
+          }
+        }
+      }
+    }
+  },
+  "homepage": "https://github.com/mikhailbovt/Contour3D",
+  "repository": "https://github.com/mikhailbovt/Contour3D"
+}

@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+* text=auto eol=lf
+*.png binary
+plugin/assets/workbench/vendor/* -text -whitespace
+plugin/assets/workbench/vendor/provenance.json text eol=lf whitespace

@@ -1,0 +1,11 @@
+Contour3D
+Copyright 2026 Mikhail Bovt
+
+Original Contour3D code and documentation are licensed under the Apache License,
+Version 2.0. This distribution includes Three.js components under the MIT License.
+Their original copyright, license and provenance are retained in
+plugin/assets/workbench/vendor/LICENSE.three.txt and
+plugin/assets/workbench/THIRD_PARTY.md.
+
+Blender, user models, reference images and generated outputs are not covered by
+this notice merely because they are used with Contour3D.

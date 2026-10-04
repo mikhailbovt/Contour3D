@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contour3D · Authoring Workbench</title>
@@ -10,60 +10,60 @@
 <body>
   <header class="topbar">
     <div class="brand"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M6 26Q20 36 34 26L29 12Q20 5 11 12Z"/><path d="M8 21Q20 29 32 21M11 12Q20 20 29 12M20 16V31"/></svg><span>Contour<span class="brand-number">3D</span><small>AUTHORING WORKBENCH</small></span></div>
-    <div class="file-context"><span class="live-dot"></span><div><strong id="scene-name">Загрузка сцены…</strong><small id="revision">Подготовка наблюдений</small></div></div>
-    <button id="fit-scene" class="quiet">Вписать сцену <kbd>F</kbd></button>
+    <div class="file-context"><span class="live-dot"></span><div><strong id="scene-name">Loading scene…</strong><small id="revision">Preparing inspection</small></div></div>
+    <button id="fit-scene" class="quiet">Fit scene <kbd>F</kbd></button>
   </header>
-  <nav class="tabs" aria-label="Рабочие режимы">
-    <button class="tab active" data-tab="model">01 <span>Модель</span></button>
-    <button class="tab" data-tab="inspect">02 <span>Поверхность</span></button>
-    <button class="tab" data-tab="references">03 <span>Референсы</span></button>
-    <button class="tab" data-tab="edit">04 <span>Правка</span><span id="region-count" class="count">0</span></button>
-    <span class="tab-note">Источник — обычный Blender</span>
+  <nav class="tabs" aria-label="Workspace modes">
+    <button class="tab active" data-tab="model">01 <span>Model</span></button>
+    <button class="tab" data-tab="inspect">02 <span>Surface</span></button>
+    <button class="tab" data-tab="references">03 <span>References</span></button>
+    <button class="tab" data-tab="edit">04 <span>Edit</span><span id="region-count" class="count">0</span></button>
+    <span class="tab-note">Source: standard Blender</span>
   </nav>
   <main>
     <aside class="parts-panel">
-      <div class="panel-heading"><span class="eyebrow">СОСТАВ СЦЕНЫ</span><span id="part-count" class="pill">—</span></div>
-      <input id="part-search" type="search" placeholder="Найти деталь…" aria-label="Поиск деталей">
+      <div class="panel-heading"><span class="eyebrow">SCENE PARTS</span><span id="part-count" class="pill">—</span></div>
+      <input id="part-search" type="search" placeholder="Find a part…" aria-label="Search parts">
       <div id="parts" class="parts-list" role="list"></div>
-      <div class="scene-summary"><div><strong id="triangle-count">—</strong><span>evaluated triangles</span></div><div><strong id="source-scale">m</strong><span>размеры в метрах</span></div></div>
-      <p id="preview-warning" class="muted">Навигационная копия. Для приёмки используйте реальные рендеры.</p>
+      <div class="scene-summary"><div><strong id="triangle-count">—</strong><span>evaluated triangles</span></div><div><strong id="source-scale">m</strong><span>dimensions in meters</span></div></div>
+      <p id="preview-warning" class="muted">Navigation preview. Use real renders for review.</p>
     </aside>
     <section class="workspace">
       <section id="model-pane" class="pane active">
-        <div class="viewport-toolbar"><div class="view-presets" aria-label="Ракурсы"><button data-view="iso" class="active">Перспектива</button><button data-view="front">Спереди</button><button data-view="side">Сбоку</button><button data-view="top">Сверху</button></div><button id="wireframe" aria-pressed="false">Сетка</button></div>
-        <div id="viewport"><div id="viewport-empty">Подготовка 3D-сцены…</div><div class="viewport-caption"><span class="caption-dot"></span> Evaluated preview <span class="separator">/</span> Z ↑ <span class="separator">/</span> метры</div><div class="axis-label">X <span>Y</span> Z</div></div>
-        <div class="viewport-bottom"><span id="selection-hint">Выберите деталь или точку на поверхности</span><span>Вращение · левая кнопка &nbsp; Перемещение · правая</span></div>
+        <div class="viewport-toolbar"><div class="view-presets" aria-label="Views"><button data-view="iso" class="active">Perspective</button><button data-view="front">Front</button><button data-view="side">Side</button><button data-view="top">Top</button></div><button id="wireframe" aria-pressed="false">Wireframe</button></div>
+        <div id="viewport"><div id="viewport-empty">Preparing the 3D scene…</div><div class="viewport-caption"><span class="caption-dot"></span> Evaluated preview <span class="separator">/</span> Z ↑ <span class="separator">/</span> meters</div><div class="axis-label">X <span>Y</span> Z</div></div>
+        <div class="viewport-bottom"><span id="selection-hint">Select a part or a surface point</span><span>Orbit · left button &nbsp; Pan · right button</span></div>
       </section>
       <section id="inspect-pane" class="pane scroll-pane">
-        <div class="section-title"><span class="eyebrow">НАБЛЮДЕНИЯ ИЗ BLENDER</span><h1>Сначала увидеть причину.</h1><p>Нейтральная форма, поток блика и адресные геометрические сигналы.</p></div>
+        <div class="section-title"><span class="eyebrow">BLENDER INSPECTION</span><h1>Inspect the current surface.</h1><p>Clay views, reflection flow and specific geometry checks.</p></div>
         <div id="diagnostic-cards" class="diagnostic-grid"></div>
         <div id="render-grid" class="render-grid"></div>
       </section>
       <section id="references-pane" class="pane scroll-pane">
-        <div class="section-title"><span class="eyebrow">ВИЗУАЛЬНЫЙ ЗАМЫСЕЛ</span><h1>Один объект. Согласованные решения.</h1><p>Реальные ракурсы связывают дизайн с текущей формой.</p></div>
-        <div class="reference-actions"><label class="button secondary" for="reference-files">Добавить изображения</label><input id="reference-files" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden><button id="copy-imagegen">Скопировать задание imagegen</button></div>
-        <div class="prompt-card"><span class="eyebrow">АДРЕСНЫЙ ЗАПРОС</span><p id="imagegen-question">В этом пакете генерация не запрашивалась.</p><details><summary>Просмотреть спецификацию</summary><pre id="imagegen-prompt"></pre></details></div>
+        <div class="section-title"><span class="eyebrow">VISUAL INTENT</span><h1>References for the current asset.</h1><p>Real views connect design decisions to the current form.</p></div>
+        <div class="reference-actions"><label class="button secondary" for="reference-files">Add images</label><input id="reference-files" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden><button id="copy-imagegen">Copy imagegen brief</button></div>
+        <div class="prompt-card"><span class="eyebrow">SPECIFIC QUESTION</span><p id="imagegen-question">Image generation was not requested for this packet.</p><details><summary>View specification</summary><pre id="imagegen-prompt"></pre></details></div>
         <div id="reference-grid" class="render-grid"></div>
-        <p class="muted">Сгенерированный вариант задаёт дизайн. Реальный результат проверяется после переноса в .blend.</p>
+        <p class="muted">Review generated ideas after implementing the accepted features in the .blend source.</p>
       </section>
       <section id="edit-pane" class="pane scroll-pane">
-        <div class="section-title"><span class="eyebrow">СОДЕРЖАТЕЛЬНАЯ ПРАВКА</span><h1>Меняем нужное. Сохраняем посадки.</h1><p>Выберите точку в 3D, обозначьте защищённую область и опишите результат.</p></div>
+        <div class="section-title"><span class="eyebrow">SCOPED EDIT</span><h1>Edit while preserving fit.</h1><p>Select a 3D point, mark a protected region and describe the result.</p></div>
         <div class="edit-layout">
-          <div class="edit-card"><label for="edit-intent">Что изменить</label><textarea id="edit-intent" rows="5" placeholder="Например: поднять выпуклость на 8 мм, сохранив эту кромку и крепления."></textarea><div id="control-editor"></div><button id="save-request" class="primary">Сохранить запрос для Codex</button><div id="request-result" class="request-result" role="status"></div></div>
-          <div class="edit-card"><span class="eyebrow">ЗАЩИЩЁННЫЕ ОБЛАСТИ</span><div class="mobile-region"><p id="selected-point-mobile">Выберите точку в 3D.</p><label for="region-radius-mobile">Радиус области, мм</label><input id="region-radius-mobile" type="number" min="0.001" step="1" value="12"><button id="protect-region-mobile" class="secondary" disabled>Защитить выбранную точку</button></div><div id="protected-regions" class="region-list"><p class="muted">Областей пока нет. Выберите точку на модели и нажмите «Зафиксировать область».</p></div><p class="muted">Запрос связан с этой версией сцены. Codex применит правку к native-источнику и проверит указанные ограничения.</p></div>
+          <div class="edit-card"><label for="edit-intent">What to change</label><textarea id="edit-intent" rows="5" placeholder="For example: raise the crown by 8 mm while preserving this rim and its mounts."></textarea><div id="control-editor"></div><button id="save-request" class="primary">Save request for Codex</button><div id="request-result" class="request-result" role="status"></div></div>
+          <div class="edit-card"><span class="eyebrow">PROTECTED REGIONS</span><div class="mobile-region"><p id="selected-point-mobile">Select a point in 3D.</p><label for="region-radius-mobile">Region radius, mm</label><input id="region-radius-mobile" type="number" min="0.001" step="1" value="12"><button id="protect-region-mobile" class="secondary" disabled>Protect selected point</button></div><div id="protected-regions" class="region-list"><p class="muted">No regions yet. Select a surface point and choose Protect region.</p></div><p class="muted">The request is bound to this scene revision. Codex edits the native source and checks the declared constraints.</p></div>
         </div>
       </section>
     </section>
     <aside class="detail-panel">
-      <span class="eyebrow">ВЫБРАННАЯ ДЕТАЛЬ</span><h2 id="selected-name">Ничего не выбрано</h2><span id="selected-role" class="pill">Выберите в сцене</span>
+      <span class="eyebrow">SELECTED PART</span><h2 id="selected-name">Nothing selected</h2><span id="selected-role" class="pill">Select in the scene</span>
       <div id="selected-metrics" class="metrics"></div>
-      <div class="point-card"><span class="eyebrow">ТОЧКА НА ПОВЕРХНОСТИ</span><p id="selected-point">Нажмите на поверхность в 3D.</p><label for="region-radius">Радиус области, мм</label><input id="region-radius" type="number" min="0.001" step="1" value="12"><button id="protect-region" class="secondary" disabled>Зафиксировать область</button></div>
-      <div class="detail-note"><span class="status-dot"></span><div><strong>Проверка по свойствам</strong><p>Положение, shaders и зависимости проверяются отдельно от художественного качества.</p></div></div>
-      <button id="isolate-part" class="quiet" disabled>Изолировать деталь</button>
+      <div class="point-card"><span class="eyebrow">SURFACE POINT</span><p id="selected-point">Click a surface in 3D.</p><label for="region-radius">Region radius, mm</label><input id="region-radius" type="number" min="0.001" step="1" value="12"><button id="protect-region" class="secondary" disabled>Protect region</button></div>
+      <div class="detail-note"><span class="status-dot"></span><div><strong>Property checks</strong><p>Position, shaders and dependencies have specific checks. Artistic quality also requires review.</p></div></div>
+      <button id="isolate-part" class="quiet" disabled>Isolate part</button>
     </aside>
   </main>
-  <footer><span id="status">Открытие visual packet…</span><span>Contour3D 1.0 · локальное рабочее окно</span></footer>
-  <dialog id="image-dialog"><button id="close-image" class="dialog-close" aria-label="Закрыть изображение">×</button><img id="full-image" alt=""><p id="full-caption"></p></dialog>
+  <footer><span id="status">Opening visual packet…</span><span>Contour3D 1.0 · local workbench</span></footer>
+  <dialog id="image-dialog"><button id="close-image" class="dialog-close" aria-label="Close image">×</button><img id="full-image" alt=""><p id="full-caption"></p></dialog>
   <div id="toast" role="status"></div>
 </body>
 </html>

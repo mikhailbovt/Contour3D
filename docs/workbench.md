@@ -16,4 +16,4 @@ Open the exact printed `http://127.0.0.1:PORT/` URL in Codex. Keep the server ru
 
 The request records the selected source revision, frame, scale, requested controls and protected region. Preview indices are not trusted native correspondence. The **References** image picker previews files in the browser; built-in imagegen is invoked separately through Codex with the actual selected inputs.
 
-The current interface is Russian. See the [packaged guide](../plugin/skills/professional-3d/references/workbench.md) for the full workflow and technical boundaries, and [privacy](../PRIVACY.md) for data handling.
+The interface is in English. See the [packaged guide](../plugin/skills/professional-3d/references/workbench.md) for the full workflow and technical boundaries, and [privacy](../PRIVACY.md) for data handling.

@@ -1,6 +1,6 @@
 ---
 name: professional-3d
-description: "Create, refine or repair complex editable 3D models in an existing Blender workflow: curved shells, technical assemblies, hard-surface props, topology/shading, materials/UV and constrained local edits. Для сложного 3D моделирования, детализации, ремонта поверхности и локальных правок в Blender."
+description: "Create, refine or repair complex editable 3D models in an existing Blender workflow: curved shells, technical assemblies, hard-surface props, topology/shading, materials/UV and constrained local edits."
 ---
 
 # Professional 3D authoring

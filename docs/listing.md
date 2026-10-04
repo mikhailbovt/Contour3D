@@ -16,15 +16,7 @@ Contour3D helps Codex avoid modeling mistakes and improve results through refere
 
 Review real Blender renders and select parts or regions in a bundled local 3D workbench without MCP. Use built-in Codex imagegen for specific visual questions or material resources, then transfer accepted features into the native asset and check it again.
 
-An existing Blender installation and local Codex execution are required; the workbench interface is currently Russian. No dramatic improvement is guaranteed: quality also depends on the GPT model, the references and the chosen representation. Checks cover only the declared properties; artistic judgment and target-runtime validation remain necessary.
-
-## Русский
-
-**Подзаголовок:** 3D-моделирование по референсам
-
-Contour3D помогает Codex избегать ошибок при моделировании и повышать качество за счёт референсов, измерений и проверок. Плагин предлагает редактируемые конструкции Blender, локальные правки с защитой важных областей, реальные диагностические рендеры, 3D-окно без MCP и адресный флоу встроенного imagegen.
-
-Требуются установленный Blender и локальное исполнение Codex. Невероятное улучшение качества не гарантируется: результат зависит также от GPT-модели, исходных материалов и выбранного способа построения. Проверки покрывают только объявленные свойства; художественная оценка и проверка целевой среды остаются необходимыми.
+An existing Blender installation and local Codex execution are required. The plugin interface and documentation are in English. No dramatic improvement is guaranteed: quality also depends on the GPT model, the references and the chosen representation. Checks cover only the declared properties; artistic judgment and target-runtime validation remain necessary.
 
 ## Starter prompts
 
@@ -43,4 +35,4 @@ Contour3D помогает Codex избегать ошибок при модел
 
 Verified locally on Windows with Blender 5.1.2 and Codex CLI 0.148.0. Other versions and platforms need their own validation. Contour3D does not host a cloud service or require its own API key; Codex and image-generation access follow the host product's terms and availability. Local Blender remains necessary for the native helpers.
 
-The installable listing values are stored in [the portable manifest](../plugin/plugin.json), including the Russian translation, release notes and unrestricted country targeting. Directory approval and visibility are separate from the GitHub release.
+The installable listing values are stored in [the portable manifest](../plugin/plugin.json), including the English description, release notes and unrestricted country targeting. Directory approval and visibility are separate from the GitHub release.

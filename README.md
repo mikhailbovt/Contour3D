@@ -8,8 +8,6 @@ It does not guarantee a dramatic quality increase. Results also depend on the GP
 
 [Download 1.0.0](https://github.com/mikhailbovt/Contour3D/releases/tag/v1.0.0) · [Getting started](docs/getting-started.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md)
 
-![Contour3D workbench with an editable enclosure and a selected region](docs/images/workbench.png)
-
 ## What it adds
 
 | Capability | Purpose |
@@ -40,7 +38,7 @@ Start a new chat and select **Contour3D / Professional 3D**. For example:
 
 > Use built-in Codex imagegen to resolve the design of this small detail from the current renders. Implement the selected features in Blender and compare using the same cameras.
 
-The workbench UI is currently Russian; modeling requests can be written in English or Russian. See [getting started](docs/getting-started.md) for direct helper commands and [the workbench guide](docs/workbench.md) for interactive review.
+The plugin interface and documentation are in English. See [getting started](docs/getting-started.md) for direct helper commands and [the workbench guide](docs/workbench.md) for interactive review.
 
 ## Requirements and verification
 
